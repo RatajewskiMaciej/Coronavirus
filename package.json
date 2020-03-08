@@ -1,0 +1,28 @@
+{
+  "name": "gatsbyjs",
+  "description": "My minimal starter for a Gatsby project",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop -p 8001",
+    "lint": "eslint .",
+    "clean": "rm -rf .cache && rm -rf public"
+  },
+  "dependencies": {
+    "gatsby": "2.19.28",
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-prefer-arrow": "1.1.7",
+    "eslint-plugin-react": "7.18.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edwmurph/gatsbyjs"
+  }
+}
