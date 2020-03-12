@@ -10,9 +10,9 @@ const LandingPage = () => {
     <div style={{
       display: "flex",
       flexDirection: "row",
-      flexWrap: "nowrap",
       justifyContent: "space-around",
-      paddingTop: "50px"
+      paddingTop: "50px",
+      flexWrap: 'wrap'
     }}>
       <MostConfirmed />
       <MostDeaths />

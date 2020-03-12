@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Papa from 'papaparse'
 
 
-const Data = () => {
+const data = () => {
   const [data, setData] = useState([])
 
   async function getData() {
@@ -16,6 +16,7 @@ const Data = () => {
     setData(data)
   }
   getData()
-  return console.log(data)
+
+  return data
 }
-export default Data
+export default data
