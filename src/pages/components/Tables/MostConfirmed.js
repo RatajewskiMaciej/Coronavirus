@@ -15,7 +15,6 @@ const MostConfirmed = () => {
     // data = data.reduce(function (a, b) {
     //   return a + b[3];
     // }, 0)
-
     setData(data)
   }
   getData()
