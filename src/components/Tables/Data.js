@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Papa from 'papaparse'
 
 
 const data = () => {
   const [data, setData] = useState([])
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   async function getData() {
     const response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-11-2020.csv");
@@ -15,7 +19,6 @@ const data = () => {
     const data = results.data;
     setData(data)
   }
-  getData()
 
   return data
 }
