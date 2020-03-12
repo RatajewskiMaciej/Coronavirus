@@ -1,10 +1,4 @@
 import React, { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import Calendar from './components/Calendar'
@@ -16,15 +10,11 @@ const index = () => {
     M.AutoInit();
   });
   return (
-    <Router>
+    <div>
       <Navbar />
-      <Switch>
-        <Route path="/">
-          <Calendar />
-          <LandingPage />
-        </Route>
-      </Switch>
-    </Router>
+      <Calendar />
+      <LandingPage />
+    </div >
   )
 }
 export default index
