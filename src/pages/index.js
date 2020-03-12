@@ -6,7 +6,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import CalendarProvider from '../components/calendarContext/provider'
 
-const Index = () => {
+const index = () => {
   useEffect(() => {
     M.AutoInit();
   });
@@ -20,4 +20,4 @@ const Index = () => {
     </div >
   )
 }
-export default Index
+export default index
