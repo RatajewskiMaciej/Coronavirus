@@ -12,7 +12,10 @@ const MostRecovered = () => {
     const csv = decoder.decode(result.value);
     const results = Papa.parse(csv); // object with { data, errors, meta }
     let data = results.data
-    // data = data.reduce((a, b) => { { a + b } })
+    // data = data.reduce((a, b, i) => {
+    //   if (a[i] === b[i]) { a = + b[i] }
+
+    // })
     data = data.slice().sort((a, b) => b[5] - a[5])
     setData(data)
   }
