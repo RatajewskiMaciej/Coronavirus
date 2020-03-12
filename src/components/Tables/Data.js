@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Papa from 'papaparse'
-
+import day from '../Calendar'
 
 const data = () => {
   const [data, setData] = useState([])
@@ -10,7 +10,7 @@ const data = () => {
   }, [])
 
   async function getData() {
-    const response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-11-2020.csv");
+    const response = await fetch(`https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${day}.csv`);
     const reader = response.body.getReader();
     const result = await reader.read(); // raw array
     const decoder = new TextDecoder('utf-8');
