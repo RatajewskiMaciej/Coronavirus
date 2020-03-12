@@ -9,6 +9,7 @@ const data = () => {
 
   useEffect(() => {
     getData()
+    console.log(day)
   }, [])
 
   async function getData() {
