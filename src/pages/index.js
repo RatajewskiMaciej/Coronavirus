@@ -5,7 +5,7 @@ import Calendar from '../components/Calendar';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { Provider } from 'react-redux'
-import store from '../components/redux/store'
+import store from '../redux/store'
 
 const index = () => {
 	useEffect(() => {

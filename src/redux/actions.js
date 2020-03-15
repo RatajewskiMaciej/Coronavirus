@@ -1,8 +1,12 @@
-import { UPDATE_DATE, RESET_DATE, UPDATE_DATA } from './types'
+import {
+  UPDATE_DATE,
+  RESET_DATE,
+  UPDATE_DATA
+} from './types'
 
 export const updateDate = (date) => {
   return (dispatch) => {
-    dispatch({ type: UPDATE_DATE, date: date })
+    dispatch({ type: UPDATE_DATE, date })
   }
 }
 
@@ -14,6 +18,6 @@ export const resetDate = () => {
 
 export const updateData = (data) => {
   return (dispatch) => {
-    dispatch({ type: UPDATE_DATA, data: data })
+    dispatch({ type: UPDATE_DATA, data })
   }
 }
