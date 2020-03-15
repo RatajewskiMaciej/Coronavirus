@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import { connect } from 'react-redux'
 
 
 const data = (props) => {
@@ -9,8 +8,6 @@ const data = (props) => {
 
 	useEffect(() => {
 		getData();
-		console.log(props)
-
 	}, []);
 
 	async function getData() {
@@ -27,9 +24,6 @@ const data = (props) => {
 	return data;
 };
 
-const mapStateToProps = state => ({
-	date: state.date
-})
-connect(mapStateToProps, {})(data)
+
 
 export default data;
