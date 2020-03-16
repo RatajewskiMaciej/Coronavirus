@@ -1,8 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-const MostDeaths = ({ data }) => {
-	const deaths = data ? data.sort((a, b) => b[4] - a[4]) : null;
+const MostDeaths = () => {
+	const data = useSelector((state) => state.data);
+
+	const deaths = data ? data.sort((a, b) => b.Deaths - a.Deaths) : null;
 
 	return (
 		<table style={{ border: '5px solid black', width: '20vw', height: '40%' }}>
@@ -13,8 +15,8 @@ const MostDeaths = ({ data }) => {
 				</tr>
 				{deaths.slice(1, 6).map((data) => (
 					<tr key={Math.random()}>
-						<th>{data[1]}{data[0] ? `(${data[0]})` : null}</th>
-						<th>{data[4]}</th>
+						<th>{data.Country}{data.Province ? `(${data.Province})` : null}</th>
+						<th>{data.Deaths}</th>
 					</tr>
 				))}
 			</tbody>
@@ -22,8 +24,4 @@ const MostDeaths = ({ data }) => {
 	);
 };
 
-const mapStateToProps = (state) => ({
-	data: state.data,
-});
-
-export default connect(mapStateToProps, {})(MostDeaths);
+export default MostDeaths;

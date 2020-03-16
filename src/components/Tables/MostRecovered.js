@@ -1,9 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
-const MostRecovered = ({ data }) => {
-	const recovered = data ? data.sort((a, b) => b[5] - a[5]) : null;
+const MostRecovered = () => {
+	const data = useSelector((state) => state.data);
+
+
+	const recovered = data ? data.sort((a, b) => b.Recovered - a.Recovered) : null;
 
 	return (
 		<table style={{ border: '5px solid black', width: '20vw', height: '40%' }}>
@@ -14,16 +17,14 @@ const MostRecovered = ({ data }) => {
 				</tr>
 				{recovered.slice(1, 6).map((data) => (
 					<tr key={Math.random()}>
-						<th>{data[1]}{data[0] ? `(${data[0]})` : null}</th>
-						<th>{data[5]}</th>
+						<th>{data.Country}{data.Province ? `(${data.Province})` : null}</th>
+						<th>{data.Recovered}</th>
 					</tr>
 				))}
 			</tbody>
 		</table>
 	);
 };
-const mapStateToProps = (state) => ({
-	data: state.data,
-});
 
-export default connect(mapStateToProps, {})(MostRecovered);
+
+export default MostRecovered;

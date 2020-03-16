@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateDate } from '../redux/actions';
 
-const Calendar = ({ updateDate }) => {
+const Calendar = () => {
 	const [day, setDay] = useState('');
-
+	const dispatch = useDispatch();
 
 	return (
 		<div>
 			<input
 				type="date"
 				min="2020-01-22"
-				max="2020-03-14"
+				max="2020-03-15"
 				onChange={(e) => {
 					setDay(e.target.value);
-					updateDate(`${e.target.value.slice(5, 10)}-2020`);
+					dispatch(updateDate(`${e.target.value.slice(5, 10)}-2020`));
 				}}
 			/>
 			<div style={{
@@ -22,7 +22,7 @@ const Calendar = ({ updateDate }) => {
 				justifyContent: 'center',
 			}}>
 				{day === '-2020' || day === ''
-					? 'Data day: 2020-01-22'
+					? 'Data day: 2020-03-15'
 					: `Data day: ${day}`
 				}
 			</div>
@@ -31,4 +31,4 @@ const Calendar = ({ updateDate }) => {
 };
 
 
-export default connect(null, { updateDate })(Calendar);
+export default Calendar;
