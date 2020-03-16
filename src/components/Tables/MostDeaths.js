@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const MostDeaths = () => {
 	const data = useSelector((state) => state.data);
 
-	const deaths = data ? data.sort((a, b) => b[4] - a[4]) : null;
+	const deaths = data ? data.sort((a, b) => b.Deaths - a.Deaths) : null;
 
 	return (
 		<table style={{ border: '5px solid black', width: '20vw', height: '40%' }}>

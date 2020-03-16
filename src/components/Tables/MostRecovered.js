@@ -6,7 +6,7 @@ const MostRecovered = () => {
 	const data = useSelector((state) => state.data);
 
 
-	const recovered = data ? data.sort((a, b) => b[5] - a[5]) : null;
+	const recovered = data ? data.sort((a, b) => b.Recovered - a.Recovered) : null;
 
 	return (
 		<table style={{ border: '5px solid black', width: '20vw', height: '40%' }}>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const MoralityRate = () => {
 	const data = useSelector((state) => state.data);
 
-	const rate = data ? data.sort((a, b) => b[4] / b[3] - a[4] / a[3]) : null;
+	const rate = data ? data.sort((a, b) => b.Deaths / b.Confirmed - a.Deaths / a.Confirmed) : null;
 
 	return (
 		<table style={{ border: '5px solid black', width: '20vw', height: '40%' }}>

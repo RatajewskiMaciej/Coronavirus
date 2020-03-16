@@ -22,7 +22,7 @@ const Calendar = () => {
 				justifyContent: 'center',
 			}}>
 				{day === '-2020' || day === ''
-					? 'Data day: 2020-01-22'
+					? 'Data day: 2020-03-15'
 					: `Data day: ${day}`
 				}
 			</div>

@@ -2,6 +2,7 @@ import {
 	UPDATE_DATE,
 	RESET_DATE,
 	UPDATE_DATA,
+	UPDATE_COUNTRY
 } from './types';
 
 export const updateDate = (date) => (dispatch) => {
@@ -14,4 +15,8 @@ export const resetDate = () => (dispatch) => {
 
 export const updateData = (data) => (dispatch) => {
 	dispatch({ type: UPDATE_DATA, data });
+};
+
+export const updateCountry = (country) => (dispatch) => {
+	dispatch({ type: UPDATE_COUNTRY, country });
 };
