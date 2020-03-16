@@ -4,10 +4,7 @@ import { useSelector } from 'react-redux';
 
 const MostConfirmed = () => {
 	const data = useSelector((state) => state.data);
-	const country = data.map((item) => item.Country);
-	// const searching = country.filter(item => item.toString())
 
-	// console.log(searching)
 
 	return (
 		<table style={{ border: '5px solid black', width: '20vw', height: '40%' }

@@ -14,7 +14,7 @@ const LandingPage = () => {
 	const data = useSelector((state) => state.data);
 
 	async function getData() {
-		const response = await fetch(`https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${date || '01-22-2020'}.csv`);
+		const response = await fetch(`https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${date || '03-15-2020'}.csv`);
 		const reader = response.body.getReader();
 		const result = await reader.read();
 		const decoder = new TextDecoder('utf-8');
