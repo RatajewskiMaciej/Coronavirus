@@ -8,12 +8,10 @@ import MostRecovered from './Tables/MostRecovered';
 import { updateData } from '../redux/actions';
 
 
-
 const LandingPage = () => {
-
-	const dispatch = useDispatch()
-	const date = useSelector(state => state.date)
-	const data = useSelector(state => state.data)
+	const dispatch = useDispatch();
+	const date = useSelector((state) => state.date);
+	const data = useSelector((state) => state.data);
 
 	async function getData() {
 		const response = await fetch(`https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${date || '01-22-2020'}.csv`);

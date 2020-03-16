@@ -21,7 +21,13 @@ function reducer(state = initialState, action) {
 	case UPDATE_DATA:
 		return {
 			...state,
-			data: action.data,
+			data: action.data.map((item) => ({
+				Province: item[0],
+				Country: item[1],
+				Confirmed: item[3],
+				Deaths: item[4],
+				Recovered: item[5],
+			})),
 		};
 	default:
 		return state;

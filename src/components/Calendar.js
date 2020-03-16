@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { updateDate } from '../redux/actions'
+import { updateDate } from '../redux/actions';
 
 const Calendar = () => {
 	const [day, setDay] = useState('');
-	const dispatch = useDispatch()
+	const dispatch = useDispatch();
 
 	return (
 		<div>
