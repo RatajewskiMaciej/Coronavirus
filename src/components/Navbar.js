@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
-// import data from './Tables/Data';
+import { useSelector } from 'react-redux';
+
 
 const Navbar = () => {
 	const [value, setValue] = useState('');
-	// const [result, setResult] = useState([]);
+	let data = useSelector(state => state.data)
 
-	// const filter = () => {
-	// 	const array = data();
-	// 	for (let i = 0; i < array.length; i++) {
-	// 		if (i === array.length - 1) { break; } else if (array[i][1] === value) {
-	// 			setResult(...result, array[i]);
-	// 		} else { null; }
-	// 	}
-	// };
-	// filter();
 
 	return (
 		< nav >
